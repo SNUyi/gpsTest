@@ -17,23 +17,44 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_out"
+                android:id="@+id/btn_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="出门"/>
+                android:textSize="10sp"
+                android:text="打开GPS"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="5dp"/>
             <Button
-                android:id="@+id/btn_in"
+                android:id="@+id/btn_end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="进门"/>
+                android:textSize="10sp"
+                android:text="关闭GPS"
+                android:background="@color/colorPrimary"/>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_click"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="退出"/>
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/btn_1s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1s"/>
+            <RadioButton
+                android:id="@+id/btn_2s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2s"/>
+            <RadioButton
+                android:id="@+id/btn_5s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5s"/>
+        </RadioGroup>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,15 +64,6 @@
             android:text="test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wifi信息："/>
-        <TextView
-            android:id="@+id/tv_wifi_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="test"/>
     </LinearLayout>
 
 </ScrollView>

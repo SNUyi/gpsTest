@@ -4,7 +4,7 @@
     package="com.xtc.test.gpstest"
     android:sharedUserId="android.uid.system">
 
-    <uses-feature android:name="android.hardware.type.watch" />
+    <!--<uses-feature android:name="android.hardware.type.watch" />-->
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
