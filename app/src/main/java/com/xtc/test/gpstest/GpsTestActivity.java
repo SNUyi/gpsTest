@@ -124,6 +124,9 @@ public class GpsTestActivity extends Activity implements View.OnClickListener {
     }
 
     private void record(long intervalTime) {
+        if (!isGpsAble(mLocationManager)) {
+            Toast.makeText(this, "先打开GPS", Toast.LENGTH_SHORT).show();
+        }
         Toast.makeText(this, "间隔时间：" + intervalTime/1000 + "秒", Toast.LENGTH_SHORT).show();
         LogUtil.d(TAG, "记录的间隔时间：" + intervalTime);
         if (mLocationManager != null) {
@@ -224,6 +227,7 @@ public class GpsTestActivity extends Activity implements View.OnClickListener {
                     mLocationManager.removeUpdates(mLocationListener);
                 }
                 setGpsModeEnable(GpsTestActivity.this, false);
+                Toast.makeText(GpsTestActivity.this, "关闭GPS", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
